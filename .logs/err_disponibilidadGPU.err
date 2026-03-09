@@ -1,0 +1,5 @@
+slurmstepd: error: Unable to create TMPDIR [/data/tmp]: No such file or directory
+slurmstepd: error: Setting TMPDIR to /tmp
+INFO:    Instance stats will not be available - XDG_RUNTIME_DIR "/run/user/1087" not accessible: stat /run/user/1087: no such file or directory
+INFO:    instance started successfully
+INFO:    Stopping disponibilidadGPU instance of /mnt/beegfs/home/nmunoz/proyecto/singularity/E2Vid.sif (PID=1742382)

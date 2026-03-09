@@ -1,0 +1,6 @@
+slurmstepd: error: Unable to create TMPDIR [/data/tmp]: No such file or directory
+slurmstepd: error: Setting TMPDIR to /tmp
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    instance started successfully
+  0%|          | 0/72 [00:00<?, ?it/s] 12%|█▎        | 9/72 [00:00<00:00, 88.67it/s] 28%|██▊       | 20/72 [00:00<00:00, 99.26it/s] 43%|████▎     | 31/72 [00:00<00:00, 103.55it/s] 58%|█████▊    | 42/72 [00:00<00:00, 105.92it/s] 74%|███████▎  | 53/72 [00:00<00:00, 105.89it/s] 89%|████████▉ | 64/72 [00:00<00:00, 106.59it/s]100%|██████████| 72/72 [00:00<00:00, 104.65it/s]
+25:   0%|          | 0/444 [00:00<?, ?it/s]25:   0%|          | 1/444 [00:03<25:16,  3.42s/it]slurmstepd: error: *** JOB 108096 ON tokikura CANCELLED AT 2025-10-17T15:08:31 DUE TO TIME LIMIT ***

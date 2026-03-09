@@ -1,0 +1,28 @@
+Sensor size: 1280 x 720
+Loading model rpg_e2vid/pretrained/E2VID_lightweight.pth.tar...
+Using TransposedConvLayer (fast, with checkerboard artefacts)
+Device: cuda:0
+== Image reconstruction == 
+Image size: 720x1280
+== Event preprocessing ==
+Will normalize event tensors.
+== Image Writer ==
+Will write images to: MouseSIS/data/MouseSIS/top/val/seq25
+Will write event previews to: MouseSIS/data/MouseSIS/top/val/seq25/events
+Will use 322560 events per tensor (automatically estimated with num_events_per_pixel=0.35).
+Will use fixed size event windows with 322560 events
+Output frame rate: variable
+== Timing statistics ==
+Events -> Device (voxel grid): 4.05 ms
+Voxel grid voting: 13.64 ms
+Reconstruction: 90.03 ms
+NumPy (CPU) -> Tensor (GPU): 0.05 ms
+Normalization: 3.73 ms
+Inference: 80.33 ms
+Unsharp mask: 1.26 ms
+Compute Imin/Imax (auto HDR): 2.40 ms
+Intensity rescaling: 0.41 ms
+Tensor (GPU) -> NumPy (CPU): 0.58 ms
+Processing entire dataset: 30.98 s
+Reading event window from file: 259.58 ms
+Building event tensor: 18.24 ms

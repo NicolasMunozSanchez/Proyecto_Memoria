@@ -1,0 +1,14 @@
+slurmstepd: error: Unable to create TMPDIR [/data/tmp]: No such file or directory
+slurmstepd: error: Setting TMPDIR to /tmp
+INFO:    Instance stats will not be available - XDG_RUNTIME_DIR "/run/user/1087" not accessible: stat /run/user/1087: no such file or directory
+INFO:    instance started successfully
+/mnt/beegfs/home/nmunoz/proyecto/rpg_e2vid/run_reconstruction.py:45: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  dtype={'width': np.int, 'height': np.int},
+/mnt/beegfs/home/nmunoz/proyecto/rpg_e2vid/run_reconstruction.py:44: FutureWarning: The 'delim_whitespace' keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep='\s+'`` instead
+  header = pd.read_csv(path_to_events, delim_whitespace=True, header=None, names=['width', 'height'],
+/mnt/beegfs/home/nmunoz/proyecto/rpg_e2vid/utils/loading_utils.py:7: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  raw_model = torch.load(path_to_model)
+/mnt/beegfs/home/nmunoz/proyecto/rpg_e2vid/utils/event_readers.py:17: FutureWarning: The 'delim_whitespace' keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep='\s+'`` instead
+  self.iterator = pd.read_csv(path_to_event_file, delim_whitespace=True, header=None,
+INFO:    Stopping eventos_a_grises instance of /mnt/beegfs/home/nmunoz/proyecto/singularity/E2Vid.sif (PID=3719203)
