@@ -1,0 +1,35 @@
+Bootstrap: docker
+From: nvidia/cuda:12.6.3-runtime-ubuntu24.04
+
+%labels
+    Author Nicolás Muñoz Sánchez
+    Version 3.0
+
+%post
+    apt-get update && apt-get install -y \
+    wget bzip2 git curl libgl1 libglib2.0-0 libsm6 libxrender1 libxext6 && \
+    apt-get clean
+
+    curl -o miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    bash miniconda.sh -b -p /opt/conda
+    rm miniconda.sh
+    export PATH=/opt/conda/bin:$PATH
+
+    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+
+    conda config --set auto_activate_base false
+
+    conda create -y -n MouseE2Vid python=3.10
+
+    conda install -y -n MouseE2Vid "pytorch>=2.3" torchvision==0.18 pytorch-cuda=12.1 -c pytorch -c nvidia
+    conda install -y -n MouseE2Vid "numpy<=1.23" pandas scipy h5py absl-py tqdm shapely Pillow scikit-image matplotlib -c conda-forge
+    conda install -y -n MouseE2Vid -c conda-forge opencv
+
+    conda run -n MouseE2Vid pip install pycocotools ultralytics transformers event-vision-library
+
+%environment
+    export PATH=/opt/conda/bin:$PATH
+    export LC_ALL=C
+    . /opt/conda/etc/profile.d/conda.sh
+    conda activate MouseE2Vid

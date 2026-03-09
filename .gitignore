@@ -1,3 +1,5 @@
 MouseSIS/
 rpg_e2vid/
-singularity/
+singularity/E2Vid.sif
+singularity/MouseE2Vid_v3.sif
+singularity/MouseSIS_preprocess.sif
