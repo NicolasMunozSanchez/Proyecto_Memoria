@@ -1,13 +1,12 @@
 #!/bin/bash
 
-#SBATCH --job-name=MouseSIS_preprocess
-#SBATCH --error=.logs/err_train1.err
-#SBATCH --output=.logs/out_train1.out
+#SBATCH --job-name=mSIS_preprocess
+#SBATCH --error=.logs/mSIS_preprocess.log
+#SBATCH --output=.logs/mSIS_preprocess.log
 #SBATCH --cpus-per-task=1
 #SBATCH --ntasks=1
 #SBATCH --time=02:00:0
 #SBATCH --mem-per-cpu=15G
-#SBATCH --nodelist=v100
 #SBATCH --gres=gpu:1
 #SBATCH --gpus-per-task=1
 #SBATCH --mail-type=END
@@ -16,7 +15,7 @@
 
 mkdir -p .logs
 
-singularity instance start --nv singularity/MouseSIS_preprocess.sif sinInsMouse
+singularity instance start --nv singularity/MouseE2Vid_v3.sif sinInsMouse
 
 cd MouseSIS
 

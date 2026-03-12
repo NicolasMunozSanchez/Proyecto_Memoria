@@ -1,0 +1,17 @@
+slurmstepd: error: Unable to create TMPDIR [/data/tmp]: No such file or directory
+slurmstepd: error: Setting TMPDIR to /tmp
+INFO:    Instance stats will not be available - requires cgroups v2 with systemd as manager.
+INFO:    instance started successfully
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/nmunoz/proyecto/MouseSIS/scripts/preprocess_events_to_e2vid_images.py", line 46, in <module>
+    main()
+  File "/mnt/beegfs/home/nmunoz/proyecto/MouseSIS/scripts/preprocess_events_to_e2vid_images.py", line 42, in main
+    reconstructor = E2Vid(image_shape=IMAGE_SHAPE, use_gpu=True)
+  File "/opt/conda/envs/MouseE2Vid/lib/python3.10/site-packages/evlib/processing/reconstruction/e2vid.py", line 87, in __init__
+    self._download_model()
+  File "/opt/conda/envs/MouseE2Vid/lib/python3.10/site-packages/evlib/processing/reconstruction/e2vid.py", line 103, in _download_model
+    os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
+  File "/opt/conda/envs/MouseE2Vid/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 30] Read-only file system: '/opt/conda/envs/MouseE2Vid/lib/python3.10/site-packages/evlib/processing/reconstruction/../../../../../artifacts'
+INFO:    Stopping sinInsMouse instance of /mnt/beegfs/home/nmunoz/proyecto/singularity/MouseE2Vid_v3.sif (PID=3112849)

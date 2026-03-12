@@ -4,11 +4,11 @@
 #SBATCH --error=.logs/MouseSIS.log
 #SBATCH --output=.logs/MouseSIS.log
 #SBATCH --cpus-per-task=1
-#SBATCH --ntasks=2
+#SBATCH --ntasks=1
 #SBATCH --time=08:00:0
 #SBATCH --mem-per-cpu=50G
-#SBATCH --nodelist=v100,v100
-#SBATCH --gres=gpu:2
+#SBATCH --nodelist=wuruwe
+#SBATCH --gres=gpu:1
 #SBATCH --gpus-per-task=1
 #SBATCH --mail-type=END
 #SBATCH --mail-user=nicolasa.munoz@pregrado.uoh.cl
